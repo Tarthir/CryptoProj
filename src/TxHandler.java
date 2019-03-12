@@ -33,8 +33,8 @@ public class TxHandler {
                 if (set_list.size() < tx.getOutputs().size()) {
                     return false
                 }
-                return true;
-            } else {
+            }
+            else {
                 return false;
             }
 
