@@ -24,7 +24,7 @@ public class TxHandler {
      *     values; and false otherwise.
      */
     public boolean isValidTx(Transaction tx) {
-        ArrayList<UTXO> utx = new UTXOPool().getAllUTXO();
+        ArrayList<UTXO> utx = new UTXOPool().getAllUTXO(); //TODO need a utxo pool that is stored somewhere/static
         // 1. all outputs claimed by {@code tx} are in the current UTXO pool
         for (Transaction.Output output : tx.getOutputs()) {
             if (utx.contains(output)) {
